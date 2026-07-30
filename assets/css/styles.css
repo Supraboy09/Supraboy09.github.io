@@ -66,6 +66,7 @@ header nav,
 .screenshots-content,
 .faq-content,
 .legal-content,
+.support-content,
 .footer-content {
     width: min(calc(100% - var(--page-gutter)), var(--content-width));
     margin-inline: auto;
@@ -599,11 +600,13 @@ main {
     text-wrap: pretty;
 }
 
-.legal-page {
+.legal-page,
+.support-page {
     background: var(--background);
 }
 
-.legal-hero {
+.legal-hero,
+.support-hero {
     padding: clamp(88px, 10vw, 132px) 0 clamp(64px, 7vw, 92px);
     background:
         radial-gradient(circle at 74% 28%, rgba(122, 168, 255, 0.13), transparent 30%),
@@ -670,6 +673,109 @@ main {
 .legal-document a:hover {
     color: var(--accent-hover);
     text-decoration-color: rgba(0, 104, 209, 0.55);
+}
+
+.support-heading {
+    width: min(100%, var(--reading-width));
+    margin-inline: auto;
+    text-align: center;
+}
+
+.support-heading h1 {
+    margin-bottom: 18px;
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-weight: 750;
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+    text-wrap: balance;
+}
+
+.support-subtitle {
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+    font-weight: 650;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.support-intro {
+    max-width: 680px;
+    margin-inline: auto;
+    color: var(--text-secondary);
+    font-size: clamp(1.05rem, 1.6vw, 1.18rem);
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+
+.support-body {
+    padding-block: var(--section-space);
+    background: linear-gradient(180deg, var(--surface-soft) 0%, var(--surface) 100%);
+}
+
+.support-grid {
+    display: grid;
+    width: min(100%, 960px);
+    margin-inline: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.support-card {
+    min-height: 220px;
+    padding: clamp(32px, 4vw, 42px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    background: var(--background);
+    box-shadow: var(--shadow-card);
+}
+
+.support-card h2,
+.support-commitment h2 {
+    margin-bottom: 14px;
+    font-size: clamp(1.35rem, 2.2vw, 1.6rem);
+    font-weight: 680;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+}
+
+.support-card p,
+.support-commitment p {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 1.4vw, 1.06rem);
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+
+.support-card a {
+    overflow-wrap: anywhere;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition:
+        color var(--transition),
+        text-decoration-color var(--transition);
+}
+
+.support-card a:hover {
+    color: var(--accent-hover);
+    text-decoration-color: rgba(0, 104, 209, 0.55);
+}
+
+.support-commitment {
+    width: min(100%, var(--reading-width));
+    margin: clamp(72px, 8vw, 96px) auto 0;
+    padding-top: clamp(48px, 6vw, 64px);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.support-commitment p {
+    max-width: 650px;
+    margin-inline: auto;
 }
 
 .site-footer {
@@ -834,6 +940,7 @@ main {
         right: -19px;
         width: 20px;
     }
+
 }
 
 @media (max-width: 700px) {
@@ -905,6 +1012,16 @@ main {
 
     .hero-image {
         width: min(78vw, 340px);
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .support-card {
+        min-height: 0;
+        padding: 32px;
     }
 
     .features-grid {
@@ -1041,6 +1158,7 @@ main {
     .faq-item summary::after,
     .faq-answer,
     .legal-document a,
+    .support-card a,
     .footer-logo,
     .footer-nav a {
         transition: none;
