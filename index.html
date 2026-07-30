@@ -10,13 +10,13 @@
 <body>
 
 <header>
-    <nav>
+    <nav aria-label="Primary navigation">
         <a href="/" class="logo" aria-label="Guess It home">
-    <img src="/assets/images/guess-it-icon.png" alt="Guess It app icon">
-    <span>Guess It</span>
-</a>
+            <img src="/assets/images/guess-it-icon.png" alt="">
+            <span>Guess It</span>
+        </a>
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/" aria-current="page">Home</a></li>
             <li><a href="/support/">Support</a></li>
             <li><a href="/privacy/">Privacy</a></li>
         </ul>
@@ -25,23 +25,32 @@
 
 <main>
     <section class="hero">
-        <h1>Guess It</h1>
+        <div class="hero-content">
+            <div class="hero-copy">
+                <h1>Guess It</h1>
 
-        <p class="tagline">
-            The Ultimate Family Guessing Game
-        </p>
+                <p class="tagline">
+                    The Ultimate Family Guessing Game
+                </p>
 
-        <p class="description">
-            Gather your family and friends for a fast-paced party game that's easy to learn, fun for all ages, and packed with laughter.
-        </p>
+                <p class="description">
+                    Gather your family and friends for a fast-paced party game that's easy to learn, fun for all ages, and packed with laughter.
+                </p>
 
-        <a href="#" class="button">
-            Coming Soon on the App Store
-        </a>
+                <a href="#" class="button">
+                    Coming Soon on the App Store
+                </a>
+            </div>
 
-        <div class="hero-image">
-    <img src="/assets/images/guess-it-home-screen.png" alt="Guess It app home screen">
-</div>
+            <div class="hero-image">
+                <img
+                    src="/assets/images/guess-it-home-screen.png"
+                    alt="Guess It app home screen"
+                    width="1170"
+                    height="2532"
+                >
+            </div>
+        </div>
     </section>
 </main>
 
