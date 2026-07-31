@@ -37,7 +37,7 @@
         0 4px 12px rgba(32, 66, 120, 0.07),
         0 18px 38px rgba(32, 66, 120, 0.12),
         0 44px 82px rgba(32, 66, 120, 0.16);
-    --focus-ring: rgba(0, 113, 227, 0.34);
+    --focus-ring: #0068d1;
     --transition: 200ms ease;
 }
 
