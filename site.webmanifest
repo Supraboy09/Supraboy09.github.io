@@ -1,0 +1,19 @@
+{
+    "name": "Guess It",
+    "short_name": "Guess It",
+    "description": "Guess It is a fun family party game for kids, friends, and game nights. Play Guess It and Two Truths & a Lie on iPhone.",
+    "id": "/",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#f5f5f7",
+    "theme_color": "#f5f5f7",
+    "icons": [
+        {
+            "src": "/assets/images/guess-it-icon.png",
+            "sizes": "1024x1024",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
