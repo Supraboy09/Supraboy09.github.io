@@ -418,7 +418,7 @@ main {
 }
 
 .screenshots {
-    overflow: hidden;
+    overflow: visible;
     background: var(--surface);
 }
 
@@ -441,12 +441,15 @@ main {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 250, 252, 0.96));
     box-shadow: var(--shadow-card);
     text-align: left;
+    overflow: visible;
 }
 
 .screenshot-image {
     position: relative;
     width: min(100%, 320px);
     margin: 0 auto;
+    padding: 4px;
+    overflow: visible;
     isolation: isolate;
 }
 
@@ -456,6 +459,14 @@ main {
 
 .screenshot:nth-child(even) figcaption {
     order: 1;
+}
+
+.screenshot:nth-child(2) {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+}
+
+.screenshot:nth-child(2) .screenshot-image {
+    width: min(100%, 440px);
 }
 
 .screenshot-image::before {
@@ -479,10 +490,17 @@ main {
 .screenshot img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
     border: 1px solid var(--border-emphasis);
-    border-radius: var(--radius-image);
+    border-radius: 26px;
     box-shadow: var(--shadow-image);
+}
+
+.screenshot:nth-child(2) img {
+    border-radius: 16px;
 }
 
 .screenshot figcaption {
@@ -1087,6 +1105,10 @@ main {
         order: initial;
     }
 
+    .screenshot:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+
     .screenshots-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -1094,6 +1116,10 @@ main {
 
     .screenshot-image {
         width: min(82vw, 400px);
+    }
+
+    .screenshot:nth-child(2) .screenshot-image {
+        width: min(100%, 520px);
     }
 
     .screenshot figcaption {
